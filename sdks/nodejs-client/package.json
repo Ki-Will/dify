@@ -45,7 +45,7 @@
   "homepage": "https://dify.ai",
   "license": "MIT",
   "scripts": {
-    "build": "vp pack",
+    "build": "node init && vp pack",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "type-check": "tsgo",

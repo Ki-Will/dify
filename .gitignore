@@ -107,7 +107,6 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
 .env-local
 .venv
 env/
@@ -207,7 +206,6 @@ sdks/python-client/build
 sdks/python-client/dist
 sdks/python-client/dify_client.egg-info
 
-.vscode/*
 !.vscode/launch.json.template
 !.vscode/settings.example.json
 !.vscode/README.md
@@ -262,3 +260,7 @@ scripts/stress-test/reports/
 
 # Vitest local reports
 web/.vitest-reports/
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
+config.bat

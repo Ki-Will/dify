@@ -7,7 +7,7 @@
     "migrate-no-unchecked-indexed-access": "./bin/migrate-no-unchecked-indexed-access.js"
   },
   "scripts": {
-    "build": "vp pack",
+    "build": "node init && vp pack",
     "type-check": "tsgo"
   },
   "dependencies": {

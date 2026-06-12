@@ -14,11 +14,31 @@
       "binName": "difyctl",
       "checksumsSuffix": "-checksums.txt",
       "targets": [
-        { "id": "linux-x64", "bunTarget": "bun-linux-x64", "exe": false },
-        { "id": "linux-arm64", "bunTarget": "bun-linux-arm64", "exe": false },
-        { "id": "darwin-x64", "bunTarget": "bun-darwin-x64", "exe": false },
-        { "id": "darwin-arm64", "bunTarget": "bun-darwin-arm64", "exe": false },
-        { "id": "windows-x64", "bunTarget": "bun-windows-x64", "exe": true }
+        {
+          "id": "linux-x64",
+          "bunTarget": "bun-linux-x64",
+          "exe": false
+        },
+        {
+          "id": "linux-arm64",
+          "bunTarget": "bun-linux-arm64",
+          "exe": false
+        },
+        {
+          "id": "darwin-x64",
+          "bunTarget": "bun-darwin-x64",
+          "exe": false
+        },
+        {
+          "id": "darwin-arm64",
+          "bunTarget": "bun-darwin-arm64",
+          "exe": false
+        },
+        {
+          "id": "windows-x64",
+          "bunTarget": "bun-windows-x64",
+          "exe": true
+        }
       ]
     }
   },
@@ -38,8 +58,8 @@
     "node": "^22.22.1"
   },
   "scripts": {
-    "build": "vp pack",
-    "dev": "bun bin/dev.js",
+    "build": "node init && vp pack",
+    "dev": "node init && bun bin/dev.js",
     "test": "vp test",
     "test:coverage": "vp test --coverage",
     "test:e2e": "vp test --config vitest.e2e.config.ts",
@@ -56,7 +76,7 @@
     "ci": "pnpm tree:check && pnpm type-check && pnpm lint && pnpm test:coverage && pnpm build",
     "clean": "rm -rf dist node_modules/.cache",
     "version:info": "bun scripts/print-buildinfo.ts",
-    "build:bin": "scripts/release-build.sh"
+    "build:bin": "node init && scripts/release-build.sh"
   },
   "dependencies": {
     "@dify/contracts": "workspace:*",

@@ -21,7 +21,7 @@
     "node": "^22.22.1"
   },
   "scripts": {
-    "build": "vp pack",
+    "build": "node init && vp pack",
     "prepare": "pnpm run build",
     "test": "vp test",
     "type-check": "tsgo",
